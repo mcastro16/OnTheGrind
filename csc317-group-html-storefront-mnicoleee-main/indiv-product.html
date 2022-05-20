@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="cssPages/indiv-products.css">
+
+	<script src="jsPages/indiv-checkout.js"></script>
+	<script src="jsPages/indiv-product.js"></script>
+	<?php include 'cart-items.php;' ?>
+
+<title>bourbon</title>
+</head>
+<body>
+	<div class="top">
+	<center>
+		<div class= "logoarea">
+
+			<div class="dropdown" align="left">
+				<img Class="icon" id="profile" src="images/profile.png">
+				<div class="dropdown-content">
+					<a href="login.html">Login</a>
+					<a href="register.html">Register</a>
+				</div>
+				</div>
+			<a href="onthegrind.html"><img id="logo" src="images/logo.png"></a>
+			<a href="cart.html"><img class="icon" id="cart" src="images/cart.png"></a>
+			</button>
+		</div>
+	</center>
+		<nav>
+			<fieldset>
+				<center>
+				<div class="navigation">
+
+					|<a href="onthegrind.html"><b> Home </b></a>|&nbsp;
+					|<a href="product.html"><b> Products </b></a>|&nbsp;
+					|<a href="faq.html"><b> FAQ </b></a>|&nbsp;
+					|<a href="about.html"><b> About </b></a>|
+
+				</center>
+
+					<div class="search-container" align="right">
+
+						<input type="text" placeholder="Search..." name="search">
+						<button type="submit">Search</button>
+					</div>
+				</div>
+
+			</fieldset>
+		</nav>
+
+	</div>
+
+<br><br><br><br><br><br><br><br><br><br>
+
+<center>
+<table>
+	<tr>
+		<td>
+			<img id="productPhoto" width="500" height="500"></img>
+			&emsp;&emsp;
+		</td>
+		<td>
+			<div class="product" align="center">
+
+				<h1 id="product-name" class="product-title"></h1>
+				<label for="product">Bag size: </label>  <br>
+				<form action="indiv-checkout.html">
+					<select id="product" onchange="setSelectedValue();">
+						<option value="select" disabled selected>Select an Option!</option>
+						<option value="1-lb"> $19.95    1lb </option>
+						<option value="2.5-lb"> $32.75    2.5lb </option>
+						<option value="5-lb"> $46.75   5lb </option>
+					</select> <br>
+					<input id="submitButton" type="submit" value="BUY" />
+				</form>
+					<button id="addCart" name="addCartButt" type="submit" value="Add to Cart!" onclick="addCartAlert();">Add to Cart</button>
+					<p id='added-alert'></p>
+					<?php
+						if(array_key_exists('addCartButt', $_POST)) {
+							addToCartTable();
+						}
+					?>
+			</div>
+		</td>
+	</tr>
+</table>
+</center>
+
+</body>
+</html>

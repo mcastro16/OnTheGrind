@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="cssPages/indiv-checkout.css">
+<link rel="stylesheet" href="cssPages/cart-checkout.css">
+<link rel="stylesheet" href="cssPages/cart.css">
+<?php include 'cart-items.php'?>
+<script src="jsPages/cart.js"></script>
+<title>CART</title>
+</head>
+<body>
+
+	  <div class="top">
+    <center>
+      <div class= "logoarea">
+
+        <div class="dropdown" align="left">
+          <img Class="icon" id="profile" src="images/profile.png">
+          <div class="dropdown-content">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+          </div>
+          </div>
+        <a href="onthegrind.html"><img id="logo" src="images/logo.png"></a>
+        <a href="cart.html"><img class="icon" id="cart" src="images/cart.png"></a>
+        </button>
+      </div>
+    </center>
+      <nav>
+        <fieldset>
+          <center>
+            <div class="navigation">
+
+                  |<a href="onthegrind.html"><b> Home </b></a>|
+                  &nbsp;
+                  |<a href="product.html"><b> Products </b></a>|
+                  &nbsp;
+                  |<a href="faq.html"><b> FAQ </b></a>|
+                  &nbsp;
+                  |<a href="about.html"><b> About </b></a>|
+
+          </center>
+
+            <div class="search-container" align="right">
+
+              <input type="text" placeholder="Search..." name="search">
+              <button type="submit">Search</button>
+            </div>
+          </div>
+
+        </fieldset>
+      </nav>
+
+    </div>
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<center>
+	<h1 id="yourCartText"> Your Cart! </h1>
+</center>
+
+<center>
+<div class="cart-container">
+	<div class="flex-child" window.onload="createDivs();" id="cartDisplay">
+
+	</div>
+	<div class="flex-child" id=cart-total>
+		<h1>Total</h1><br>
+		<p id="total-items">Total Items:</p>
+		<p id="total-price">Total Price:</p>
+	</div>
+</div>
+
+<br>
+<a href="product.html">
+	<button id="backButton">Add more products</button>
+</a>
+</center>
+
+</body>
+</html>

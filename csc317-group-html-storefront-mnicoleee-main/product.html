@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cssPages/productlist.css">
+
+  <script src="jsPages/productlist.js" type="text/javascript"></script>
+<title>Product Listings</title>
+</head>
+
+<body>
+  <div class="top">
+    <center>
+      <div class= "logoarea">
+
+        <div class="dropdown" align="left">
+          <img Class="icon" id="profile" src="images/profile.png">
+          <div class="dropdown-content">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+          </div>
+        </div>
+        <a href="onthegrind.html"><img id="logo" src="images/logo.png"></a>
+        <a href="cart.html"><img class="icon" id="cart" src="images/cart.png"></a>
+        </button>
+      </div>
+    </center>
+      <nav>
+        <fieldset>
+          <center>
+            <div class="navigation">
+
+              |<a href="onthegrind.html"><b> Home </b></a>|
+              &nbsp;
+              |<a href="product.html"><b> Products </b></a>|
+              &nbsp;
+              |<a href="faq.html"><b> FAQ </b></a>|
+              &nbsp;
+              |<a href="about.html"><b> About </b></a>|
+
+            </center>
+
+      <div class="search-container" align="right">
+
+        <input type="text" placeholder="Search..." name="search">
+        <button type="submit">Search</button>
+      </div>
+    </div>
+
+  </fieldset>
+</nav>
+
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<!--------------->
+
+<div id="filterContainer" align="center">
+  <button class="btnAll" onclick="filterSelection('all')">Show All</button>
+  <button class="btn" onclick="filterSelection('coffee')">Coffee</button>
+  <button class="btn" onclick="filterSelection('tea')">Tea</button>
+  <button class="btn" onclick="filterSelection('merch')">Other</button>
+</div>
+
+
+<!---------->
+
+
+<center>
+
+<div class="comingsoon">
+  <div class="filterDiv merch">
+    <h2><b>
+      More Merch Coming soon <br>
+      ~December 2021~
+    </b></h2>
+  </div>
+</div>
+
+<div class="container">
+  <table>
+    <tr>
+
+    <td>
+      <div class="filterDiv coffee">
+        <div class="product">
+            <a onclick='setSelectedProduct("arabica");' href="indiv-product.html" value="arabica" id="productName">
+            <img src="images/packaging_photos/arabica_Packaging.png" alt="Arabica Coffee Beans" width="250" height="250">
+            <h5><a onclick='setSelectedProduct("arabica");' href="indiv-product.html" value="arabica" id="productName">Arabica</a></h5>
+            <p class="price">$19.95 - $46.75</p>
+          </div>
+      </div>
+    </td>
+
+    <td>
+      <div class="filterDiv coffee">
+        <div class="product">
+            <a onclick='setSelectedProduct("bourbon");' href="indiv-product.html" value="bourbon" id="productName">
+            <img src="images/packaging_photos/bourbon_Packaging.png" alt="Bourbon" width="250" height="250">
+            <h5><a onclick='setSelectedProduct("bourbon");' href="indiv-product.html" value="bourbon" id="productName">Bourbon</a></h5>
+            <p class="price">$19.95 - $46.75</p>
+          </div>
+      </div>
+    </td>
+
+    <td>
+      <div class="filterDiv coffee">
+        <div class="product">
+          <a onclick='setSelectedProduct("excelsa");' href="indiv-product.html" value="excelsa" id="productName">
+          <img src="images/packaging_photos/excelsa_Packaging.png" alt="Excelsa" width="250" height="250">
+          <h5><a onclick='setSelectedProduct("excelsa");' href="indiv-product.html" value="excelsa" id="productName">Excelsa</a></h5>
+          <p class="price">$19.95 - $46.75</p>
+        </div>
+      </div>
+    </td>
+
+  </tr>
+  <tr>
+
+    <td>
+      <div class="filterDiv coffee">
+        <div class="product">
+            <a onclick='setSelectedProduct("french roast");' href="indiv-product.html" value="frenchroast" id="productName">
+            <img src="images/packaging_photos/frenchroast_Packaging.png" alt="French Roast" width="250" height="250">
+            <h5><a onclick='setSelectedProduct("french roast");' href="indiv-product.html" value="frenchroast" id="productName">French Roast</a></h5>
+            <p class="price">$19.95 - $46.75</p>
+          </div>
+      </div>
+    </td>
+
+    <td>
+      <div class="filterDiv coffee">
+        <div class="product">
+            <a onclick='setSelectedProduct("geisha");' href="indiv-product.html" value="giesha" id="productName">
+            <img src="images/packaging_photos/geisha_Packaging.png" alt="Geisha" width="250" height="250">
+            <h5><a onclick='setSelectedProduct("geisha");' href="indiv-product.html" value="giesha" id="productName">Geisha</a></h5>
+            <p class="price">$19.95 - $46.75</p>
+          </div>
+      </div>
+    </td>
+
+    <td>
+      <div class="filterDiv coffee">
+        <div class="product">
+          <a onclick='setSelectedProduct("liberica");' href="indiv-product.html" value="liberica" id="productName">
+          <img src="images/packaging_photos/liberica-Packaging.png" alt="liberica" width="250" height="250">
+          <h5><a onclick='setSelectedProduct("liberica");' href="indiv-product.html" value="liberica" id="productName">liberica</a></h5>
+          <p class="price">$19.95 - $46.75</p>
+        </div>
+      </div>
+    </td>
+
+  </tr>
+  <tr>
+
+    <td>
+      <div class="filterDiv coffee">
+        <div class="product">
+          <a onclick='setSelectedProduct("robusta");' href="indiv-product.html" value="robusta" id="productName">
+          <img src="images/packaging_photos/robusta_Packaging.png" alt="Robusta" width="250" height="250">
+          <h5><a onclick='setSelectedProduct("robusta");' href="indiv-product.html" value="robusta" id="productName">Robusta</a></h5>
+          <p class="price">$19.95 - $46.75</p>
+        </div>
+      </div>
+    </td>
+
+    <td>
+      <div class="filterDiv coffee">
+        <div class="product">
+          <a onclick='setSelectedProduct("typica");' href="indiv-product.html" value="typica" id="productName">
+          <img src="images/packaging_photos/typica_Packaging.png" alt="Typica" width="250" height="250">
+          <h5><a onclick='setSelectedProduct("typica");' href="indiv-product.html" value="typica" id="productName">Typica</a></h5>
+          <p class="price">$19.95 - $46.75</p>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+
+    <!----------->
+<table>
+  <tr>
+    <td>
+      <div class="filterDiv tea">
+        <div class="product">
+            <a onclick='setSelectedProduct("green tea");' href="indiv-product.html" value="green" id="productName">
+            <img src="images/green.jpg" alt="Green Tea" width="250" height="250">
+            <h5><a onclick='setSelectedProduct("green tea");' href="indiv-product.html" value="green" id="productName">Green Tea</a></h5>
+            <p class="price">$19.95 - $46.75</p>
+          </div>
+      </div>
+    </td>
+
+    <td>
+      <div class="filterDiv tea">
+        <div class="product">
+            <a onclick='setSelectedProduct("rose tea");' href="indiv-product.html" value="rose" id="productName">
+            <img src="images/rose.jpg" alt="Rose Tea" width="250" height="250">
+            <h5><a onclick='setSelectedProduct("rose tea");' href="indiv-product.html" value="rose" id="productName">Rose Tea</a></h5>
+            <p class="price">$19.95 - $46.75</p>
+          </div>
+      </div>
+    </td>
+
+    <td>
+      <div class="filterDiv tea">
+        <div class="product">
+            <a onclick='setSelectedProduct("herbal tea");' href="indiv-product.html" value="herbal" id="productName">
+            <img src="images/herbal.jpg" alt="Herbal" width="250" height="250">
+            <h5><a onclick='setSelectedProduct("herbal tea");' href="indiv-product.html" value="herbal" id="productName">Herbal Tea</a></h5>
+            <p class="price">$19.95 - $46.75</p>
+          </div>
+        </div>
+      </td>
+
+    </tr>
+    <tr>
+
+      <td>
+        <div class="filterDiv tea">
+          <div class="product">
+              <a onclick='setSelectedProduct("white tea");' href="indiv-product.html" value="white" id="productName">
+              <img src="images/white.jpg" alt="White Tea" width="250" height="250">
+              <h5><a onclick='setSelectedProduct("white tea");' href="indiv-product.html" value="white" id="productName">White Tea</a></h5>
+              <p class="price">$19.95 - $46.75</p>
+            </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+<!---------------->
+  <table>
+    <tr>
+      <td>
+        <div class="filterDiv merch">
+          <div class="product">
+              <a onclick='setSelectedProduct("shirt");' href="indiv-product.html" value="shirt" id="productName">
+              <img src="images/shirt.jpg" alt="shirt" width="250" height="250">
+              <h5><a onclick='setSelectedProduct("shirt");' href="indiv-product.html" value="green" id="productName">Shirt</a></h5>
+              <p class="price">$20</p>
+            </div>
+        </div>
+      </td>
+
+      <td>
+        <div class="filterDiv merch">
+          <div class="product">
+              <a onclick='setSelectedProduct("shirt2");' href="indiv-product.html" value="shirt2" id="productName">
+              <img src="images/shirt2.jpg" alt="shirt2" width="250" height="250">
+              <h5><a onclick='setSelectedProduct("shirt2");' href="indiv-product.html" value="rose" id="productName">Shirt2</a></h5>
+              <p class="price">$20</p>
+            </div>
+        </div>
+      </td>
+  
+      <td>
+        <div class="filterDiv merch">
+          <div class="product">
+              <a onclick='setSelectedProduct("shirt3");' href="indiv-product.html" value="shirt3" id="productName">
+              <img src="images/shirt3.jpg" alt="Herbal" width="250" height="250">
+              <h5><a onclick='setSelectedProduct("shirt3");' href="indiv-product.html" value="shirt3" id="productName">Shirt3</a></h5>
+              <p class="price">$20</p>
+            </div>
+          </div>
+
+      </td>
+    </tr>
+  </table>
+  
+  
+
+    </tr>
+  </table>
+</div>
+
+</center>
+
+
+<!----------->
+
+<script src="jsPages/productlist.js" type="text/javascript"></script>
+
+
+</body>
+</html>

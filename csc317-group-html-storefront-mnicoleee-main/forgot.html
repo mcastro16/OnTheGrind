@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="cssPages/registration.css">
+        <link rel="stylesheet" href="checkouts-css/indiv-checkout.css">
+        <title>Forgot Password</title>
+    </head>
+ <body>
+
+    <!-- Retrive icons from ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <div class="top">
+    <center>
+      <div class= "logoarea">
+
+        <div class="dropdown" align="left">
+          <img Class="icon" id="profile" src="images/profile.png">
+          <div class="dropdown-content">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+          </div>
+          </div>
+        <a href="onthegrind.html"><img id="logo" src="images/logo.png"></a>
+        <a href="cart.html"><img class="icon" id="cart" src="images/cart.png"></a>
+        </button>
+      </div>
+    </center>
+      <nav>
+        <fieldset>
+          <center>
+            <div class="navigation">
+              
+                  |<a href="onthegrind.html"><b> Home </b></a>|
+                  &nbsp;
+                  |<a href="product.html"><b> Products </b></a>|
+                  &nbsp;
+                  |<a href="faq.html"><b> FAQ </b></a>|
+                  &nbsp;
+                  |<a href="about.html"><b> About </b></a>|
+
+                  <a href="login.html"><button>Login</button></a>
+                  <a href="register.html"><button>Register</button></a>
+                  </div>
+          </div>
+
+          </center>
+
+            <div class="search-container" align="right">
+
+              <input type="text" placeholder="Search..." name="search">
+              <button type="submit">Search</button>
+            </div>
+          </div>
+
+        </fieldset>
+      </nav>
+
+    </div>
+<br><br><br><br><br><br><br><br><br><br>
+
+<div class="container">
+    <div class="forgot-container">
+        <form action="" id="forgot" onsubmit="return checkInputs();">
+            <div class="forgot-form">
+                <h1 class="title">Reset your password</h1>
+                <p>We will send you an email to reset your password.</p>
+                <hr>
+
+                <div class ="field">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <label for="lname">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                </div>
+
+                <button class="submit-button" type="submit">Continue</button>
+                <!-- Redirects to login  page -->
+                <div class="login-link">
+                    <a href="login.html">Login</a>
+                </div>
+                <!-- Redirects to registration page -->
+                <div class="register-link">
+                    <a href="register.html">Don't have an account? Create an account.</a>
+                </div>
+            </div>
+          </form>
+    </div>
+</div>
+
+    <!--JS page-->
+    <script src="jsPages/registration.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<?php
+$server="localhost";
+$user="root";
+$password="pswd";
+$db="CUSTOMERS";
+
+mysql_connect($server, $user, $password);
+mysql_select_db($db);
+
+if(isset($_POST['email'])) {
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+
+  $sql="select * from CUSTOMERS where email='".$email."' AND password='".$password."' limit 1";
+  $result = mysql_query($sql);
+
+  if(mysql_num_rows($result)==1) {
+    $message = "";
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . '/onthegrind.html');
+    exit();
+  } else {
+    $message = echo "You have entered an incorrect email or password";
+    exit();
+  }
+}
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <link rel="stylesheet" href="cssPages/registration.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+    </head>
+<body>
+
+    <!-- Retrive icons from ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<div class="top">
+<center>
+<div class= "logoarea">
+
+  <div class="dropdown" align="left">
+    <img Class="icon" id="profile" src="images/profile.png">
+    <div class="dropdown-content">
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </div>
+    </div>
+  <a href="onthegrind.html"><img id="logo" src="images/logo.png"></a>
+  <a href="cart.html"><img class="icon" id="cart" src="images/cart.png"></a>
+  </button>
+</div>
+</center>
+<nav>
+  <fieldset>
+    <center>
+    <div class="navigation">
+
+      |<a href="onthegrind.html"><b> Home </b></a>|
+      &nbsp;
+      |<a href="product.html"><b> Products </b></a>|
+      &nbsp;
+      |<a href="faq.html"><b> FAQ </b></a>|
+      &nbsp;
+      |<a href="about.html"><b> About </b></a>|
+
+    </center>
+
+      <div class="search-container" align="right">
+
+        <input type="text" placeholder="Search..." name="search">
+        <button type="submit">Search</button>
+      </div>
+    </div>
+
+  </fieldset>
+</nav>
+
+</div>
+
+<div class="container">
+    <div class="login-container">
+        <form action="#" method="POST" id="login" onsubmit="return checkInputs();">
+            <div class="login-form">
+                <h1 class="title">Login</h1>
+                <hr>
+                <?php
+                echo $message;
+                ?>
+                <div class ="field">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                </div>
+
+                <div class ="field">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password">
+                </div>
+
+                <button class="submit-button" type="submit">Sign In</button>
+                <!-- Redirects to forget password page -->
+                <div class="forgot-link">
+                    <p><a href="forgot.html">Forgot your password?
+                    </a></p>
+                </div>
+                <!-- Redirects to registration page -->
+                <div class="register-link">
+                    <p><a href="register.html">Create an account.</a></p>
+                </div>
+
+                <div class="social">
+                    <a href="#" class="social_icon"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#" class="social_icon"><ion-icon name="logo-google"></ion-icon></a>
+                    <a href="#" class="social_icon"><ion-icon name="logo-twitter"></ion-icon></a>
+                </div>
+            </div>
+          </form>
+    </div>
+</div>
+
+    <!--JS page-->
+    <script src="jsPages/registration.js"></script>
+
+</body>
+</html>
